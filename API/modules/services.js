@@ -5,17 +5,17 @@ const serviceSchema = mongoose.Schema({
     type: String,
     require: true,
   },
-  destination: {
-    type: String,
-    require: true,
-  },
-  description: {
-    tyoe: String,
-    require: true,
-  },
   prix: {
     type: Number,
     require: true,
+  },
+  description: {
+    type: String,
+    require: true,
+  },
+  destination: {
+    type: String,
+    required: true,
   },
 });
 

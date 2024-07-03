@@ -6,6 +6,7 @@ import "dotenv/config";
 import driverRouters from "./Routers/driverRouters.js";
 import clientRouters from './Routers/clientRouters.js';
 import adminRouters from "./Routers/adminRouters.js";
+import registre from "./Routers/registre.js";
 
 const app = express();
 const port = process.env.PORT;
@@ -24,6 +25,7 @@ app.use(express.json())
 app.use("/driver", driverRouters);
 app.use("/admin", adminRouters);
 app.use("/client", clientRouters);
+app.use("/sign", registre);
 //server listening 
 app.listen(port, (err) => {
   if (err) throw err;
