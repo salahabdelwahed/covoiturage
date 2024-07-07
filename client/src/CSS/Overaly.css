@@ -1,32 +1,108 @@
 .over {
-background-image: url(../../public/images/roadtrip.jpg); 
-background-size: cover;
-background-position: center;
-background-color: #2b2d2e;
-width: 100%;
-min-width: 290px;
-height: 500px;
-margin-top: -5px;
-padding-top: 0px;
-display: flex;
-align-items: center;
-justify-content: center;
+  background-image: url(../../public/images/roadtrip.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: #2b2d2e;
+  width: 100%;
+  min-width: 290px;
+  height: 500px;
+  margin-top: -5px;
+  padding-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.over h1 { 
-   
-    color: #ffffff;
-    font-size: 31px;
-    font-weight: 700;
-    line-height: 0.1;
-   
+.over div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7%;
+}
+.over h1 {
+  color: #ffffff;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 0.1;
 }
 .over p {
-    text-align: center;
-    margin: 6%;
-    color: #ffffff;
-    font-size: 19px;
-    line-height: 1.1;
-    font-weight: 500;
-    text-rendering: optimizelegibility;
+  text-align: center;
+  margin: 6%;
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 1.1;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
 }
+.btn-service {
+  padding: 9px 27px;
+  background-color: rgba(0, 0, 0, 0.34902);
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.34902);
+  margin: 15px auto;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 5px;
+  color: white;
+  width: 30%;
+}
+.btn-service:hover {
+  background-color: #65bf1f;
+}
+
+.intro {
+  width: 80%;
+  margin: 15px auto;
+  display: flex;
+  height: 300px;
+}
+.intro div {
+  margin: 40px 0px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 50%;
+}
+.intro h1 {
+  padding: 10px 0px;
+  font-size: 1.6em;
+}
+.btn-driver {
+  padding: 10px 30px;
+  font-size: 15px;
+  background-color: #65bf1f;
+  color: #ffffff;
+  border: 1px solid #65bf1f;
+  font-weight: bold;
+  margin: 2px 0px;
+  border-radius: 25px;
+  width: 40%;
+}
+.btn-driver:hover{
+    opacity: 0.8;
+}
+.block1 {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+} 
+.block1 div{
+    margin: 8% auto;
+}
+.block1 h1 {
+  color: #444;
+  background-color: transparent;
+  border-bottom: 1px solid #d0d0d0;
+  font-weight: bold;
+  border: none;
+  margin: 0px;
+  padding: 10px 0px;
+  font-size: 1.6em;
+}
+ul li {
+  font-size: 16px;
+}
+.block1 img {
+    padding-top: 10px;
+    width: 40%;
+    height: 20%;
+    margin :5%;
+} 
