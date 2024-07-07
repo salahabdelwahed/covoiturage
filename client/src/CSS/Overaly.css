@@ -1,0 +1,32 @@
+.over {
+background-image: url(../../public/images/roadtrip.jpg); 
+background-size: cover;
+background-position: center;
+background-color: #2b2d2e;
+width: 100%;
+min-width: 290px;
+height: 500px;
+margin-top: -5px;
+padding-top: 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.over h1 { 
+   
+    color: #ffffff;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 0.1;
+   
+}
+.over p {
+    text-align: center;
+    margin: 6%;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.1;
+    font-weight: 500;
+    text-rendering: optimizelegibility;
+}
