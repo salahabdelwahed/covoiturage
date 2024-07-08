@@ -9,7 +9,7 @@ const Nav = () => {
       <ul className='SignLog'>
       <li><a href="link"> Se connecter</a></li>
       <li><a href="link">S'inscrire</a></li>
-      <li><a href="link">Proposer un tarjet</a></li>
+      <li><a href="link">Contact</a></li>
       </ul>
       </div>
     </div>

@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .over {
   background-image: url(../../public/images/roadtrip.jpg);
   background-size: cover;
@@ -149,4 +153,30 @@ ul li {
   text-align: center;
   font-size: 16px;
   width: 84%;
+} 
+.tag{
+  text-align: center;
+}
+.block3{
+  display: flex;
+  width: 72%;
+  margin: 10px auto;
+
+}
+.block3 img{ 
+  width: 23%; 
+  margin: 10px;
+} 
+.footer{
+  background-color: #65BF1F;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.footer p{ 
+ text-align: center; 
+ font-weight: 500;
+ color: white; 
+ height: 25px; 
+ margin: 0 auto;
 }
