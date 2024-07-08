@@ -24,7 +24,7 @@ const Overaly = () => {
       </div>
       <div className="block1">
         <div>
-          <h1 >Vous cherchez une voiture?</h1>
+          <h1>Vous cherchez une voiture?</h1>
           <p>3 solutions s’offrent à vous:</p>
           <ul>
             <li>
@@ -37,10 +37,37 @@ const Overaly = () => {
             </li>
           </ul>
           <button className="btn-driver">Rechercher un tarjet</button>
-        </div> 
+        </div>
         <img src="./images/autostop.jpg" alt="" />
-      </div> 
-      <div className="block2"></div>
+      </div>
+      <h1 className="title">POURQUOI FREECOVOITURAGE</h1>
+      <div className="block2">
+        <div className="blk-2x">
+          <h2>Zéro commission pour les passagers</h2>
+          <img src="./images/green_money_saving.png" alt="" />
+          <p>
+            Aucun frais caché. Les passagers ne payent aucune commission. Seule
+            une éco-contribution de 1€ est demandée au conducteur pour assurer
+            le maintien et le bon fonctionnement de la plateforme.
+          </p>
+        </div>
+        <div className="blk-2x">
+          <h2>Paiement sécurisé</h2>
+          <img src="./images/secure_payment.png" alt="" />
+          <p>
+            Paiement simplifié et entièrement sécurisé par CB. C’est la garantie
+            d’être payé et de voyager en toute sérénité!
+          </p>
+        </div>
+        <div className="blk-2x">
+          <h2>Simple et pratique</h2>
+          <img src="./images/simple_pratique.png" alt="" />
+          <p>
+            Notre site web et nos applications mobiles ont été conçues pour être
+            intuitifs, rapides et pratiques.
+          </p>
+        </div>
+      </div>
     </>
   );
 };
