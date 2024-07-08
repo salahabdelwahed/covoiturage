@@ -1,17 +1,14 @@
 import React from 'react'
-import Nav from './Components/Nav'
-import Overaly from './Components/Overaly'
-
-
+import HomePage from './Components/HomePage.js'
 
 const App = () => {
   return (
     <div>
-    <Nav/>
-    <Overaly/>
+      <HomePage/>
     </div>
   )
 }
 
 export default App
+
 
