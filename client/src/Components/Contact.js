@@ -4,19 +4,17 @@ const Contact = () => {
   return (
     <div>
     <div>
-    <div className="registre">
-      <div className="container-reg">
-        <h1>Inscription</h1>
-        <div className="inscrit">
-          <input type="text" placeholder="username" name="username" />
-          <input type="text" placeholder="email" name="email" />
-          <input type="text" placeholder="phone" name="phone" />
-          <input type="password" placeholder="password" name="password" />
-          <button className="reg-btn">Registre</button>
+    <div className="contact">
+      <div className="container-contact">
+        <h1>Contact</h1>
+        <div className="form">
+          <input type="text" placeholder="Username" name="Username" />
+          <input type="text" placeholder="Email" name="Email" />
+          <input type="text" placeholder="Subject" name="Subject" />
+          <textarea placeholder="Message" name="msg" id="msg" />
+          <button className="contact-btn">Envoyer</button>
         </div>
         <p>
-          Si vous avez un compte, vous pouvez{" "}
-          <Link to={"/login"}>Connectez ici</Link>
         </p>
       </div>
     </div>
