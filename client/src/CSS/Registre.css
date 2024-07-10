@@ -1,0 +1,64 @@
+.registre {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 15px;
+    margin: 60px auto;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+  }
+  .container-reg {
+    width: 50%;
+    position: relative;
+  }
+  .container-reg p {
+      display: flex;
+      flex-direction: column;
+    margin: 20px;
+  }
+  .inscrit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reg-btn{
+    font-size: 15px;
+    background-color: #65bf1f;
+    color: #ffffff;
+    border: 1px solid #65bf1f;
+    font-weight: bold;
+    margin: 2px 0px;
+    border-radius: 25px;
+    padding: 9px 12px !important;
+  }
+  .registre h1 {
+    display: block;
+    font-size: 1.5em;
+  }
+.inscrit input {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 15px;
+    width: 50%;
+    margin: 10px 0px;
+    border: 1px solid #65bf1f;
+    border-radius: 5px;
+  }
+  .container-reg a{
+    font-size: 15px;
+    background-color: #65bf1f;
+    color: #ffffff;
+    border: 1px solid #65bf1f;
+    font-weight: bold;
+    margin: 15px auto;
+    width: 20%;
+    border-radius: 25px;
+    padding: 9px 12px !important;
+    text-decoration: none;
+  }

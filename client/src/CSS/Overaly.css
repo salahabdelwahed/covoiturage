@@ -36,19 +36,18 @@
   font-weight: 500;
   text-rendering: optimizelegibility;
 }
-.btn-service {
+.btn-service a {
   padding: 9px 27px;
   background-color: rgba(0, 0, 0, 0.34902);
   background-image: none;
-  border: 1px solid rgba(0, 0, 0, 0.34902);
-  margin: 15px auto;
+  margin: 15px;
   font-weight: bold;
   font-size: 15px;
   border-radius: 5px;
-  color: white;
-  width: 30%;
+  color: white ;
+  text-decoration: none;
 }
-.btn-service:hover {
+.btn-service a:hover {
   background-color: #65bf1f;
 }
 

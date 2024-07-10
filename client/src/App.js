@@ -1,9 +1,10 @@
 import React from "react";
 import HomePage from "./Components/HomePage.js";
-import Contact from "./Components/Contact.js";
-import Service from "./Components/Contact.js";
 import Nav from "./Components/Nav.js";
 import { Route, Routes } from "react-router-dom";
+import Registre from "./Components/Registre.js";
+import Login from "./Components/Login.js";
+
 
 const App = () => {
   return (
@@ -11,10 +12,11 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registre" element={<Registre/>} />
         <Route path="*" element={<h1>page not found</h1>} />
-      </Routes>
+      </Routes> 
+   
     </>
   );
 };

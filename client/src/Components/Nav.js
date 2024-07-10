@@ -9,13 +9,13 @@ const Nav = () => {
         <img src="./images/logo-free-covoiturage-white.png" alt="" />
         <ul className="SignLog">
           <li>
-            <Link to={"/"}> Se connecter</Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/sign"}>S'inscrire</Link>
+            <Link to={"/login"}> Se connecter</Link>
           </li>
           <li>
-            <Link to={"/Contact"}>Contact</Link>
+            <Link to={"/registre"}>S'inscrire</Link>
           </li>
         </ul>
       </div>
