@@ -3,6 +3,7 @@ console.clear();
 import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
+import cors from "cors";
 import driverRouters from "./Routers/driverRouters.js";
 import clientRouters from './Routers/clientRouters.js';
 import adminRouters from "./Routers/adminRouters.js";
@@ -21,6 +22,9 @@ mongoose
 
 //middleware
 app.use(express.json()) 
+app.use(cors())
+
+
 //end
 app.use("/driver", driverRouters);
 app.use("/admin", adminRouters);
