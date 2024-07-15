@@ -11,7 +11,9 @@ const Registre = ({ errorsVal, seterrorsVal }) => {
     axios
       .post("http://localhost:5050/sign/registre", user)
       .then(
-        (result) => localStorage.setItem("auth", result.data.userToken)
+        (result) => (
+          localStorage.setItem("auth", result.data.userToken), seterrorsVal([])
+        )
       )
       .catch((err) =>
         seterrorsVal(

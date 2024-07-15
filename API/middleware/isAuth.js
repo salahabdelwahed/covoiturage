@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../modules/users.js"
+import user from "../modules/users.js"
 
 const isAuth = async (req, res, next) => {
   try {
@@ -15,13 +15,13 @@ const isAuth = async (req, res, next) => {
     }
 
     //find user in DB
-    const userFind = await User.findById(decoded.id);
+    const userFind = await user.findById(decoded.id);
     if (!userFind) {
       return res.status(401).send({ msg: "user not auth" });
     }
     console.log(userFind);
     //asysign
-    req.User = userFind;
+    req.user = userFind;
     next();
   } catch (error) {
     return res.status(500).send({ msg: "we have error", error });
