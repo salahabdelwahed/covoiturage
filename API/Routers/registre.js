@@ -1,7 +1,8 @@
+console.clear()
 import express from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import User from "../modules/users.js";
+import user from "../modules/users.js";
 import {
   validation,
   validationRegister,
@@ -14,8 +15,8 @@ const router = express.Router();
 router.post("/registre", validation, validationRegister(), async (req, res) => {
   const { username, email, password } = req.body;
   try {
-    const emailFind = await User.findOne({ email });
-    const usernameFind = await User.findOne({ username });
+    const emailFind = await user.findOne({ email });
+    const usernameFind = await user.findOne({ username });
     if (emailFind || usernameFind) {
       return res
         .status(400)
@@ -23,7 +24,7 @@ router.post("/registre", validation, validationRegister(), async (req, res) => {
     }
 
     //prep data
-    const dataUser = new User({ username, email, password });
+    const dataUser = new user({ username, email, password });
     //end
 
     //hased password
@@ -49,13 +50,12 @@ router.post("/registre", validation, validationRegister(), async (req, res) => {
     res.status(500).send({ msg: "can't get user", error });
   }
 });
-//end
 
 //login
 router.post("/login", validateLogin(), validation, async (req, res) => {
   const { email, password } = req.body;
   try {
-    const userfind = await User.findOne({ email });
+    const userfind = await user.findOne({ email });
     if (!userfind) {
       return res
         .status(400)

@@ -1,0 +1,9 @@
+.inscrit textarea {
+  padding: 10px;
+  font-size: 15px;
+  width: 50%;
+  height: 130px;
+  margin: 10px 0px;
+  border: 1px solid #65bf1f;
+  border-radius: 5px;
+}

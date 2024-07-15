@@ -5,7 +5,7 @@ export const validationRegister = () => {
   return [
     check("username", "username is required").not().isEmpty(),
     check("email", "please enter your validator email").isEmail(),
-    check("pzssword", "enter a strong password").isStrongPassword(),
+    check("password", "enter a strong password").isStrongPassword(),
   ];
 };
 //end

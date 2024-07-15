@@ -11,20 +11,15 @@ const userSchema = mongoose.Schema({
     require: true,
     unique: true,
   },
-  phone: {
-    type: Number,
-    require: true,
-    unique: true,
-  },
   password: {
     type: String,
     require: true,
   },
   isAdmin: {
     type: String,
-    default: false
-  }
+    default: false,
+  },
 });
 
-const User = mongoose.model("User", userSchema);
-export default User;
+const user = mongoose.model("User", userSchema);
+export default user;

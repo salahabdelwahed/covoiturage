@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const serviceSchema = mongoose.Schema({
   place: {
-    type: String,
+    type: Number,
     require: true,
   },
   prix: {
@@ -17,6 +17,10 @@ const serviceSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  source: {
+    type: String,
+    required: true,
+  }
 });
 
 const service = mongoose.model("service", serviceSchema);
