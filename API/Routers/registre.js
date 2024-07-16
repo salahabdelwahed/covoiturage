@@ -81,8 +81,8 @@ router.post("/login", validateLogin(), validation, async (req, res) => {
 });
 //end
 //test current user
-router.get("/current", isAuth, (req, res) => {
-  res.send({ msg: "user is auth", user: req.user });
+router.get("/Current", isAuth, (req, res) => {
+  res.send({ msg: "user is auth", User: req.User });
 });
 //end
 

@@ -11,26 +11,24 @@ import axios from "axios";
 import AdminPage from "./Components/AdminPage.js";
 
 function App() {
-  const [user, setuser] = useState(null);
+  const [client, setClient] = useState({});
   const [userAdmin, setuserAdmin] = useState(false);
   const [errorsVal, seterrorsVal] = useState([]);
+  useEffect(() => {
+    const getCurrentUser = async () => {
+      try {
+        const result = await axios.get("http://localhost:5050/sign/Current", {
+          headers: { auth: localStorage.getItem("auth") },
+        });
+        setClient(result.data.User); // Assurez-vous que "User" existe dans la réponse.
+      } catch (err) {
+        console.log("Erreur lors de la récupération de l'utilisateur actuel", err);
+      }
+    };
 
-useEffect(() => {
-const getCurrentUser = async () => {
-    await axios
-      .get("http://localhost:5050/sign/current",  {
-        headers: { auth: localStorage.getItem("auth") },
-      })
-      .then((result) => setuser(result.data.user))
-      .catch((err) => console.log("error from current", err));
-  };
-  return () => {
-      getCurrentUser();
-  }
-}, [])
-
-
-
+    getCurrentUser();
+  }, []); 
+ 
   return (
     <>
       <Nav />
@@ -46,7 +44,7 @@ const getCurrentUser = async () => {
             <Registre errorsVal={errorsVal} seterrorsVal={seterrorsVal} />
           }
         />
-        {user && <Route path="/user" element={<UserPage />} />}{" "}
+        {client && <Route path="/user" element={<UserPage />} />}{" "}
         {userAdmin && (
           <>
             {" "}
