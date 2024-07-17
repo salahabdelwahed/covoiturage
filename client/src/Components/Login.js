@@ -1,19 +1,23 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../CSS/Login.css";
 
-
-const Login = ({errorsVal,seterrorsVal}) => {
+const Login = ({ errorsVal, seterrorsVal, setUserChange }) => {
   const [user, setuser] = useState({});
-
+  const navigator = useNavigate();
   const handelchange = (event) => {
     setuser({ ...user, [event.target.name]: event.target.value });
   };
   const loginUser = () => {
     axios
       .post("http://localhost:5050/sign/login", user)
-      .then((result) => (localStorage.setItem("auth", result.data.userToken)),seterrorsVal([]))
+      .then(
+        (result) => localStorage.setItem("auth", result.data.userToken),
+        seterrorsVal([]),
+        setUserChange(true),
+        navigator("/user")
+      )
       .catch((err) =>
         seterrorsVal(
           err.response.data.msg
@@ -44,7 +48,8 @@ const Login = ({errorsVal,seterrorsVal}) => {
           </button>
         </div>
         <p>
-          {errorsVal && errorsVal.map((error, index) => <p key={index}> {error} </p>)}
+          {errorsVal &&
+            errorsVal.map((error, index) => <p key={index}> {error} </p>)}
           Si vous n'avez pas de compte, vous pouvez{" "}
           <Link to={"/registre"}>inscrit ici</Link>
         </p>

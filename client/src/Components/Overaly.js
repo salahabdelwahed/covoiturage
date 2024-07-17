@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/Overaly.css";
-import { Link } from "react-router-dom";
+
 const Overaly = () => {
   return (
     <>
@@ -8,10 +8,6 @@ const Overaly = () => {
         <div>
           <h1>Une autre vision du covoiturage</h1>
           <p>Le covoiturage solidaire qui crée des liens</p>
-          <p className="btn-service">
-            <Link to={"/Service"}> Service</Link>
-            <Link to={"/Contact"}> Contact</Link>
-          </p>
         </div>
       </div>
       <div className="intro">

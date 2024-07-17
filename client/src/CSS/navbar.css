@@ -1,19 +1,19 @@
-.header-container{ 
+.header-container {
   position: fixed;
   width: 100%;
-  background-color: #65BF1F;
+  background-color: #65bf1f;
   padding: 0px 30px;
   height: 55px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: space-between;
 }
 
-.SignLog{
+.SignLog {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,15 +21,27 @@
   margin-top: 7px;
 }
 
-.SignLog a{
-  text-decoration: none; 
-  margin: 10px; 
+.SignLog a {
+  text-decoration: none;
+  margin: 10px;
   color: white;
   padding: 0px 10px;
-    font-weight: bold;
-    line-height: initial;
+  font-weight: bold;
+  line-height: initial;
 }
-.SignLog a:hover{
+.SignLog a:hover {
   color: black;
-  cursor:pointer; 
+  cursor: pointer;
+}
+#logOut {
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  padding: 0px 10px;
+  font-weight: bold;
+  line-height: initial;
+}
+#logOut :hover {
+  color: black;
+  cursor: pointer;
 }
