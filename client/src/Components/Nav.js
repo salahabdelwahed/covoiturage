@@ -1,13 +1,16 @@
 import React from "react";
 import "../CSS/navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Nav = ({ client, setClient, setUserChange }) => {
+  const navigate = useNavigate();
   const logoutFunc = () => {
     localStorage.removeItem("auth");
-    setClient(null);
+    setClient(null); // Réinitialiser le client à null
     setUserChange(false);
+    navigate("/");
   };
+
   return (
     <div className="header-container">
       <div className="container">
@@ -15,27 +18,30 @@ const Nav = ({ client, setClient, setUserChange }) => {
         <ul className="SignLog">
           {client ? (
             <>
-              {" "}
               <li>
-                <Link to={"/login"}> Se connecter</Link>
+                <Link to={"/user"}>Accueil</Link>
               </li>
               <li>
-                <Link to={"/registre"}>S'inscrire</Link>
+                <Link to={"/Service"}>Service</Link>
+              </li>
+              <li>
+                <Link to={"/Contact"}>Contact</Link>
+              </li>
+              <li id="logOut" onClick={logoutFunc}>
+                Déconnexion
               </li>
             </>
           ) : (
             <>
+              {" "}
               <li>
-                <Link to={"/home"}>Home</Link>
+                <Link to={"/"}>Home</Link>
               </li>
               <li>
-                <Link to={"/Service"}> Service</Link>
+                <Link to={"/login"}>Se connecter</Link>
               </li>
               <li>
-                <Link to={"/Contact"}> Contact</Link>
-              </li>
-              <li id="logOut" onClick={() => logoutFunc()}>
-                Logout
+                <Link to={"/registre"}>S'inscrire</Link>
               </li>
             </>
           )}

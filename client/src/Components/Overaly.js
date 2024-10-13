@@ -1,5 +1,6 @@
 import React from "react";
 import "../CSS/Overaly.css";
+import { Link } from "react-router-dom";
 
 const Overaly = () => {
   return (
@@ -19,7 +20,9 @@ const Overaly = () => {
             inoubliables et économisez plein de sous en partageant vos places
             libres et en transportant des colis.
           </p>
-          <button className="btn-driver">Proposer un tarjet</button>
+          <p className="btn-driver">
+            <Link to={"/Service"}>Proposer un tarjet</Link>
+          </p>
         </div>
       </div>
       <div className="block1">
@@ -36,7 +39,10 @@ const Overaly = () => {
               frais de carburant et de péage
             </li>
           </ul>
-          <button className="btn-driver">Rechercher un tarjet</button>
+          <p className="btn-driver">
+            {" "}
+            <Link to={"/Service"}>Rechercher un tarjet</Link>
+          </p>
         </div>
         <img src="./images/autostop.jpg" alt="" />
       </div>

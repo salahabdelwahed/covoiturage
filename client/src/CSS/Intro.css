@@ -1,0 +1,18 @@
+.welcome {
+  background-image: url(https://cdn.prod.website-files.com/6413856d54d41b5f298d5953/6569e0d13806d8569668c9a5_trajet-covoiturage-voiture-location.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position: center;
+  background-color: #2b2d2e;
+  width: 100%;
+  min-width: 290px;
+  height: 700px;
+  margin-top: -5px;
+  padding-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome h1{
+    color: rgb(27, 199, 0);
+}

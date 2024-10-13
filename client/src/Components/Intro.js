@@ -1,9 +1,10 @@
 import React from 'react'
-
+import "../CSS/Intro.css"
 const Intro = () => {
   return (
-    <div>
-      <img src="./images/Intro.jpg" alt="" srcset="" />
+    <div className='welcome'>
+    <h1>
+    bienvenue dans le meilleur service de covoiturage</h1>
     </div>
   )
 }

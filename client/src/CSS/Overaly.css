@@ -68,7 +68,7 @@
   padding: 10px 0px;
   font-size: 1.6em;
 }
-.btn-driver {
+.btn-driver a {
   padding: 10px 30px;
   font-size: 15px;
   background-color: #65bf1f;
@@ -78,6 +78,7 @@
   margin: 2px 0px;
   border-radius: 25px;
   width: 40%;
+  text-decoration: none;
 }
 .btn-driver:hover {
   opacity: 0.8;
