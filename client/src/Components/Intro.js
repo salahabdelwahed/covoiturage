@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <div className='welcome'>
     <h1>
-    bienvenue dans le meilleur service de covoiturage</h1>
+    Bienvenue Dans Le Meilleur Service De covoiturage</h1>
     </div>
   )
 }

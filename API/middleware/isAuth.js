@@ -21,7 +21,7 @@ const isAuth = async (req, res, next) => {
     }
     console.log(userFind);
     //asysign
-    req.User = userFind;
+    req.user = userFind;
     next();
   } catch (error) {
     return res.status(500).send({ msg: "we have error", error });

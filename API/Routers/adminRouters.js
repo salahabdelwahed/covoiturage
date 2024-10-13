@@ -1,12 +1,12 @@
 console.clear()
 import express from "express";
-import User from "../modules/users.js";
+import user from "../modules/users.js";
 
 const router = express.Router();
 //post driver
 router.post("/addDriver", async (req, res) => {
   try {
-    const newDriver = User(req.body);
+    const newDriver = user(req.body);
     await newDriver.save();
     res.status(200).send({ msg: "Driver added successfully" });
   } catch (error) {
@@ -17,7 +17,7 @@ router.post("/addDriver", async (req, res) => {
 // post client
 router.post("/addClient", async (req, res) => {
   try {
-    const newClient = User(req.body);
+    const newClient = user(req.body);
     await newClient.save();
     res.status(200).send({ msg: "Client added successfully" });
   } catch (error) {

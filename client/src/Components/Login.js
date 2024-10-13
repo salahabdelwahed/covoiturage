@@ -16,7 +16,7 @@ const Login = ({ errorsVal, seterrorsVal, setUserChange }) => {
         (result) => localStorage.setItem("auth", result.data.userToken),
         seterrorsVal([]),
         setUserChange(true),
-        navigator("/user")//hhhhhhhhhhhhhh
+        navigator("/user")
       )
       .catch((err) =>
         

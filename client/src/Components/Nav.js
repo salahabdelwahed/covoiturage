@@ -2,7 +2,7 @@ import React from "react";
 import "../CSS/navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
-const Nav = ({ client, setClient, setUserChange }) => {
+const Nav = ({ client, setClient, setUserChange, userAdmin }) => {
   const navigate = useNavigate();
   const logoutFunc = () => {
     localStorage.removeItem("auth");
@@ -16,7 +16,9 @@ const Nav = ({ client, setClient, setUserChange }) => {
       <div className="container">
         <img src="./images/logo-free-covoiturage-white.png" alt="" />
         <ul className="SignLog">
-          {client ? (
+        
+          {client ? 
+            (
             <>
               <li>
                 <Link to={"/user"}>Accueil</Link>
@@ -45,6 +47,7 @@ const Nav = ({ client, setClient, setUserChange }) => {
               </li>
             </>
           )}
+         
         </ul>
       </div>
     </div>
